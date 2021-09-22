@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Proyecto Final Christian Yepes Gomez</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!---------
+    CSS
+---------->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/owl-carousel.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <!---------
+    JS
+---------->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/main.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+
+</head>
+
+
+
+<body>
+
+    <!---------
+    NAV
+---------->
+
+    <div class="fixed-side-navbar">
+        <ul class="nav flex-column">
+            <li class="nav-item disabled"><a class="nav-link" href="#"><span>Login</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#home"><span>Introducción</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#services"><span>Datos</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact-us"><span>Contactanos</span></a></li>
+
+        </ul>
+    </div>
+
+    <!---------
+    BANNER
+---------->
+
+    <div class="parallax-content baner-content" id="home">
+        <div class="container">
+            <div class="first-content">
+                <h1>Proyecto Final</h1>
+                <span><em>By:</em> Christian Yepes Gomez</span>
+                <div class="primary-button">
+                    <a href="#services">Comienza aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------
+    SERVICE
+---------->
+
+    <div class="service-content" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="left-text">
+                        <h4>Cosas Sobre mi proyecto</h4>
+                        <div class="line-dec"></div>
+                        <p>Este proyecto es una idea basada en un sistema de riego automatico que pueda aportar
+                            información sobre las plantas que estamos regando</p>
+                        <ul>
+                            <li>- Ver Humedad de la planta y Ambiental</li>
+                            <li>- Ver Temperatura y Humedad del ambiente</li>
+                            <li>- Ver Litros/Minuto</li>
+                            <li>- Ver Cantidad de luz que tiene nuestra planta</li>
+                        </ul>
+                        <div class="primary-button">
+                            <a href="javascript:void(0)" class="regar_button">Regar</a>
+                            <a href="javascript:void(0)" class="stats_button disabled">Estadisticas</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4 id="temperatura">Temperatura</h4>
+                                <div class="line-dec"></div>
+                                <p class="valor_temperatura">---</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4 id="humedad">Humedad</h4>
+                                <div class="line-dec"></div>
+                                <p class="valor_humedad">---</p>
+                                <p class="valor_humedad_tierra">---</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4 id="luz">Luz</h4>
+                                <div class="line-dec"></div>
+                                <p class="valor_luz">---</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4 id="flujo">Litros</h4>
+                                <div class="line-dec"></div>
+                                <p class="valor_flujo">---</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------
+    CONTACT
+---------->
+
+    <div class="parallax-content contact-content" id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <div class="row">
+                            <form id="contact" action="send" method="POST">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <input name="name" type="text" class="form-control" id="name"
+                                                placeholder="Tu nombre..." required="">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <input name="email" type="email" class="form-control" id="email"
+                                                placeholder="Tu email..." required="">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <textarea name="message" rows="6" class="form-control" id="message"
+                                                placeholder="Tu mensaje..." required=""></textarea>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="btn">Enviar Mensaje</button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------
+    FOOTER
+---------->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="primary-button">
+                        <a href="#home">Volver arriba</a>
+                    </div>
+                    <ul>
+                        <li><a target="blank" href="https://twitter.com/Cyg_Yepes"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a target="blank" href="https://www.linkedin.com/in/christian-yepes-gómez-675145142/"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                        <li><a target="blank" href="https://github.com/ChristianYepesGomez"><i
+                                    class="fa fa-github"></i></a></li>
+                    </ul>
+                    <p>Copyright &copy; 2021 Christian Yepes - Design: <a rel="nofollow noopener" target="blank"
+                            href="https://github.com/ChristianYepesGomez"><em>Christian
+                                Yepes</em></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Import axios library -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Import socket io library -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Start io variable -->
+    <script>
+        var socket = io();
+    </script>
+
+</body>
+
+</html>
